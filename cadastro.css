@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+html body
+{
+background-image: url('assets/fundo9.jpg');
+	background-position: center;
+	 background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.desc
+{
+	color: white;
+	text-shadow: 1px 1px black;
+	margin-top:2%;
+	padding-bottom: 1%;
+	}
+.redefinir
+{
+	width: 40%;
+	margin-left: 34%;
+	margin-top: 1%;
+	float: left;
+}
+.i{
+	width: 100px;
+	border-radius: 50%;
+
+}
+.ic
+{
+	margin-top: 1.4%!important;
+	position: absolute;
+	border-radius: 45%;
+	background-color: #ffffffc9;
+	border: 1px solid #2e6da4;
+	left: 46%;
+	top:15%
+}
+
+.aviso{
+	width: 100%;
+	text-align: center;
+	margin-top: 3%;
+	position: absolute;
+}
+.alert{
+	margin-top: 3%;
+}
+.logar{
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.adm{
+	margin-top: 20%;
+}
+h2{
+	text-align: center;
+	margin-bottom: 15%;
+}
+h3{
+	text-align: center;
+	margin-bottom: 15%;
+	margin-top: 15%;
+}
+
+.formulario{
+	width: 90%;
+	margin-left: 4%;
+	margin-top: 5%;
+	padding-bottom: 0%;
+}
+.box h2
+{
+	padding-top:3%;
+	margin:0;
+}
+.box
+{
+	margin-top: 5%;
+	background-color:#bce8e652;
+	width: 40%;
+	margin-left: 30%;
+	border-radius: 10px 10px 0px 0px;
+	background-attachment: fixed;
+	background-position: center;
+	border-style: solid;
+    border-width: 5px 3px 0px 3px;
+    border-color: #bce8e652;
+    padding-top: 1%;
+    opacity: 1;
+    color: white;
+}
+.box-2
+{
+
+	background-color:#bce8e652;
+	width: 40%;
+	margin-left: 30%;
+    border-radius: 0px 0px 10px 10px;
+	background-attachment: fixed;
+	background-position: center;
+	border-style: solid;
+    border-width: 0px 3px 5px 3px;
+    border-color: #bce8e652;
+    padding-top: 1%;
+    opacity: 1;
+    color: white;
+
+}
+.pres{
+	color: white;
+	text-shadow: 1px 1px black;
+}

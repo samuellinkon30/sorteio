@@ -1,0 +1,141 @@
+<div class="box">
+<center>
+<h1>Relatório</h1>
+
+
+<h2 class="titulo">Selecione a lista desejada</h2>
+
+<div class="search">
+
+<form action="relatorio.php">
+<select name='historico'>
+	<option value='false' <?php if($historico == 'false') echo 'selected'; ?>>Inscritos do mês</option>
+	<option value='true' <?php if($historico == 'true') echo 'selected'; ?>>Histórico</option>
+</select>
+<input type="submit" value="Visualizar"></input>
+</form>
+<?php if(!isset($_GET['historico']) || $_GET['historico'] == 'false') {?>
+
+</div>
+<style>
+.container
+	{
+		width:847px;
+	}
+
+	.titulo
+	{
+		padding: 3%;
+		text-align: center;
+	}
+	.table
+	{
+		width: 96%;
+		max-width: 88%;
+		margin-left: -3%;
+
+	}
+	
+</style>
+<h2>Inscritos (MÊS)</h2>
+<br>
+<form action="relatorio.php">
+	<input type="text" id="nomeinscritos" name="nomeinscritos" placeholder="Nome Filtro" value="<?php echo $nomeinscritos ; ?>"></input>
+	<input type="text" id="cpfinscritos" name="cpfinscritos" placeholder="Cpf Filtro" value="<?php echo $cpfinscritos ; ?>"></input>
+	<input type="text" id="numeroinscritos" name="numeroinscritos" placeholder="Número Filtro" value="<?php echo $numeroinscritos ; ?>"></input>
+	<input type="submit" value="Filtrar"></input>
+	<input type="button" onclick="javascript:limpar('relatorio');" value="Limpar"></input>
+</form>
+<br><br>
+<table class="table table-hover">
+<thead>
+	<td><b>Nome</b></td>
+	<td><b>CPF</b></td>
+	<td><b>Número do Sorteio</b></td>
+</thead>
+<?php
+$sql = "SELECT nome,cpf,id FROM sorteados WHERE prioridade != 1 ";
+if($nomeinscritos){
+	$sql .= "AND upper(nome) LIKE upper('%$nomeinscritos%') ";
+}
+if($cpfinscritos){
+	$sql .= "AND cpf LIKE '%$cpfinscritos%' ";
+}
+if($numeroinscritos){
+	$sql .= "AND id LIKE '%$numeroinscritos%' ";
+}
+$sql .= "ORDER BY id";
+$result = $conexao->query($sql);
+$row = $result->fetch_assoc();
+while($row){
+	echo "<tr>";
+	echo "<td>".$row['nome']."</td>";
+	echo "<td>".$row['cpf']."</td>";
+	echo "<td>".$row['id']."</td>";
+	echo "</tr>";
+	$row = $result->fetch_assoc();
+}
+?>
+</table>
+<?php } ?>
+<?php if(isset($_GET['historico']) && $_GET['historico'] == 'true') { ?>
+<h2>Lista com histórico dos participantes</h2>
+
+<form action="relatorio.php">
+	<input type="text" id="nomehistorico" name="nomehistorico" placeholder="Nome Filtro" value="<?php echo $nomehistorico ; ?>"></input>
+	<input type="text" id="numerohistorico" name="numerohistorico" placeholder="Número Filtro" value="<?php echo $numerohistorico ; ?>"></input>
+	<input type="date" id="datahistorico" name="datahistorico" value="<?php echo $datahistorico; ?>"></input>
+	<input type="submit" value="Filtrar"></input>
+	<input type="button" onclick="javascript:limpar('histórico');" value="Limpar"></input>
+</form>
+<div class="tabela">
+<table class="table table-hover">
+<thead>
+	<td><b>Nome</b></td>
+	<td><b>Número do Sorteio</b></td>
+	<td><b>Data de realização</b></td>
+</thead>
+<?php
+	$sql = "SELECT nome,id,datasorteio FROM vencedor WHERE 1=1 ";
+		if($nomehistorico){
+			$sql .= "AND nome LIKE '%$nomehistorico%' ";
+		}
+		if($numerohistorico){
+			$sql .= "AND id LIKE '%$numerohistorico%' ";
+		}
+		if($datahistorico){
+			$sql .= "AND datasorteio = '$datahistorico' ";
+		}
+	$sql .= "ORDER BY datasorteio";
+	$result = $conexao->query($sql);
+	$row = $result->fetch_assoc();
+	while ($row) {
+		echo "<tr>";
+		echo "<td>".$row['nome']."</td>";
+		echo "<td>".$row['id']."</td>";
+		echo "<td>".date( 'd-m-Y' , strtotime($row['datasorteio']) )."</td>";
+		echo "</tr>";
+		$row = $result->fetch_assoc();
+	}
+?>
+</table>
+</div>
+</center>
+<?php } ?>
+</div>
+<script type="text/javascript">
+	function limpar(campo){
+		if(campo == "relatorio"){
+			document.getElementById('nomeinscritos').value = "";
+			document.getElementById('cpfinscritos').value = "";
+			document.getElementById('numeroinscritos').value = "";
+		}
+		if(campo == "histórico"){
+			document.getElementById('nomehistorico').value = "";
+			document.getElementById('numerohistorico').value = "";
+			document.getElementById('datahistorico').value = "";
+		}
+	}
+</script>
+</body>
+</html>

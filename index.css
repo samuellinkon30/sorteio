@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+html body
+{
+	background-image: url('assets/fundo9.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%!important;
+}
+.desc
+{
+	color: white;
+	text-shadow: 1px 1px black;
+	margin-top:6%;
+}
+.pres{
+	color: white;
+	text-shadow: 1px 1px black;
+}
+/*.btn btn-primary
+{
+	margin-left: 35%!important;
+}*/
+.box
+{
+	margin-top: 7%;
+	background-color:#bce8e652;
+	width: 26%;
+	margin-left: 37%;
+	border-radius: 10px 10px 0px 0px;
+	background-attachment: fixed;
+	background-position: center;
+	border-style: solid;
+	border-width: 5px 3px 0px 3px;
+	border-color: #bce8e652;
+	padding-top: 1%;
+	opacity: 1;
+	color: white;
+}
+.ic
+{
+	margin-top: 2%;
+	position: absolute;
+	border-radius: 45%;
+	background-color: #ffffffc9;
+	border: 1px solid #2e6da4;
+	left: 46%;
+	top:25%
+}
+.i
+{
+	width: 100px;
+	border-radius: 50%;
+}
+.box-2
+{
+	width: 26%;
+	margin-left: 37%;
+	background-color:#bce8e652;
+	background-attachment: fixed;
+	background-position: center;
+	border-style: solid;
+	border-width: 0px 3px 5px 3px;
+	border-color: #bce8e652;
+	border-radius: 0px 0px 10px 10px;
+
+}
+.box h2
+{
+	margin-bottom: 0px;
+	padding-bottom: 15px;
+}
+
+.redefinir
+{
+	width: 100%;
+	margin-top: 5%;
+	float: left;
+	padding-left: 18%;
+}
+.aviso
+{
+	width: 45%;
+	text-align: center;
+	margin-top: 6%;
+	position: absolute;
+
+}
+.alert
+{
+	margin-top: 3%;
+
+}
+.formulario
+{
+	width: 86%;
+	margin-left: 4%;
+	padding-bottom: 0%;
+}
+
+.button-2
+{
+	float: left;
+	padding-left: 3%;
+}
+.button-1
+{
+	float: left;
+}
+
+.logar{
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.adm{
+	margin-top: 20%;
+}
+h2{
+	text-align: center;
+	margin-bottom: 15%;
+}
+h3{
+	text-align: center;
+	margin-bottom: 15%;
+	margin-top: 15%;
+}
+
+.left
+{
+	position: relative;
+	left: 5%;
+	bottom: 0;
+	float: left;
+	padding-top: 0.5%;
+}
+.rigth
+{
+	position: relative;
+	right: 5%;
+	bottom: 0;
+	float: right;
+	padding-top: 0.5%;
+}
+.form-horizontal .control-label
+{
+
+	color: white;
+}

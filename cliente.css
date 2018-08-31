@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+html body
+{
+	margin-left: 216px;
+  background-image: url('assets/fundo9.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.card-deck{
+	margin-top: 15%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.btn.mes{
+	margin: 2%;
+	width: 20%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+{.btn.mes
+	{
+		width: 42%!important;
+		
+	}
+}
+
+@media only screen and (max-width: 769px)
+{
+	html body
+	{
+		margin-left: 0!important;
+	}
+	.card-body
+	{
+		font-size: 15px;
+	}
+	.card 
+	{
+		position: inherit!important;
+		margin-bottom: 5%;
+	}
+	.btn.mes
+	{
+		width: 45%!important;
+		
+	}
+	.card-deck .card
+	{
+		margin-bottom: 15%!important;
+	}
+	
+}

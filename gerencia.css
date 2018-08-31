@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+html body
+{
+	margin-left: 216px;
+	background-image: url('assets/fundo9.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.card{
+	margin-top: 30px;
+	width: 80%!important;
+		margin-bottom: 10%!important;
+
+
+}
+.card-body{
+	white-space: nowrap;
+}
+.card-body input{
+	text-align: center;
+	width: 200px;
+}
+.table-overflow {
+    max-height:200px;
+    overflow-y:auto;
+}
+.card-header{
+	height: 45px;
+}
+
+#btnsize{
+	width: 100px;
+}
+#btnsizesorteio{
+	width: 100%;
+}

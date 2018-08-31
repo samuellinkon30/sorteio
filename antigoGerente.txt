@@ -1,0 +1,110 @@
+<div class="box">
+		<h1>Sorteio</h1>
+		<form class="form-inline formulario" method="POST">
+			<!-- <div class="form-group">
+				<label class="control-label col-sm-3" for="id">Procurar Sorteado:</label>
+				<input type="text" class="form-control" name="id" placeholder="Digite o numero Sorteado">
+				<button type="submit" class="btn btn-default">Buscar</button>
+			</div>
+			<div class="form-group ">
+				<label class="control-label" for="apg" >Deletar Lista:</label>
+				<input type="button" class="btn btn-default" value="Apagar Lista" onclick="deletarLista();">
+			</div> -->
+			<table id="sorteiobox">
+				<tr>
+					<td><label class="control-label" for="id">Procurar:</label></td>
+					<td><input type="text" class="form-control" name="id" placeholder="Digite o numero Sorteado"></td>
+					<td><button type="submit" class="btn btn-default">Sortear!</button></td>
+				</tr>
+				<tr>
+					<td><label class="control-label" for="apg" >Resetar Lista:</label></td>
+					<td><input type="button" class="btn btn-default" value="Reset" onclick="deletarLista();"></td>
+				</tr>
+			</table>
+		</form> 
+	</div>
+
+	<div class="box inf">
+		<div class="container">
+			<h1>Lista dos Participantes</h1>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>CPF</th>
+						<th>Numero do Sorteio</th>
+					</tr>
+				</thead>
+				<?php
+				$query = $conexao->query("SELECT nome,cpf,id FROM `sorteados` WHERE prioridade = 0");
+				while($row = $query->fetch_assoc()){
+					$nome = $row['nome'];
+					$cpf = $row['cpf'];
+					$id2 = $row['id'];
+					echo "<tr>";
+					echo "<td>$nome</td>";
+					echo "<td>$cpf</td>";
+					echo "<td>$id2</td>";
+					echo "</tr>";
+				}
+				?>
+			</table>
+		</div>
+		<?php 
+		if(isset($_POST['id'])){
+			$id = $_POST['id'];
+			$query = $conexao->query("SELECT * FROM `sorteados` WHERE `id`='$id'");
+			$row = $query->fetch_assoc();
+			if (isset($row['nome'])) {
+				$nome =  $row['nome'];
+				$cpf =  $row['cpf'];
+				?>
+				<div class="aviso">
+					<div class="alert alert-success">
+						<strong>Successo!</strong> Vencedor é o <?php echo "$nome de CPF: $cpf"; ?>
+						<script type="text/javascript"> alert(' Vencedor é o <?php echo "$nome de CPF: $cpf";?>')</script>
+						<?php
+						$sql = "INSERT INTO vencedor (id,nome,cpf,datasorteio) VALUES ('".$id."','". $nome."', '".$cpf."',current_date())";
+						$conexao->query($sql);
+						?>
+					</div>	
+				</div>
+			<?php } else { ?>
+				<div class="aviso">
+					<div class="alert alert-danger">
+						<strong>Erro!</strong> Ninguem com esse numero Sorteado!
+					</div>	
+				</div>
+			<?php }
+		} ?>
+		<center>
+			<input type="button" class="btn btn-default" value="Imprimir" onClick="window.print()"/>
+		</center>
+		<br>
+	</div>
+	<script type="text/javascript">
+		function deletarLista(){
+			if(confirm(" Tem certeza que deseja resetar a lista de sorteados? ")){
+				$.ajax({
+					type: 'post',
+					url : 'administrador.php',
+					data: { "apg": "true" },
+					success: function(response) {
+						window.location.href = "administrador.php";
+					}
+				});
+			}
+		}
+	</script>
+</body>
+</html>
+<style>
+.container {
+	width:847px;
+}
+#sorteiobox {
+	border-collapse: separate;
+	border-spacing: 0 8px;
+	margin-top: -8px;
+}
+</style>

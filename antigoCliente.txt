@@ -1,0 +1,244 @@
+ <div class="box-cliente">
+
+
+    <h1 class="displaynone"><?php echo "Bem Vindo(a), $nome_sorteio" ?></h1>
+    <br>
+    <h2>Dados Pessoais</h2>
+    <h3><?php echo "Nome: $nome_sorteio" ?></h3>
+    <h3><?php echo "CPF: $cpf_sorteio" ?></h3>
+    <h3><?php echo "Numero do Sorteio: $id_sorteio" ?></h3>
+    <?php      
+    $sql = "SELECT * FROM vencedor WHERE id='$id_sorteio' AND datasorteio = (SELECT MAX(datasorteio) FROM vencedor)";
+    $result = $conexao->query($sql);
+    $row = $result->fetch_assoc();
+    if($row){
+      echo "<h3><font color='green'>PARABÉNS , VOCÊ GANHOU O SORTEIO\n ENTRE EM CONTATO PARA RECEBER SEU PREMIO</font></h3>";
+    }
+
+
+    ?>
+    <center>
+      <input type="button" class="btn btn-default displaynone" value="Imprimir" onClick="window.print()"/>
+    </center>
+    <form class="redefinir" method="GET" >  
+    </form>
+  </div>
+
+  <div class="box-cliente baixo">
+    <div class="box-txt"> 
+     <h2 class="txt-ganhadores">Ganhadores Mensais</h2>
+<style>
+  .w3-dropdown-hover
+  {
+    margin: 2%;
+    margin-left: 7%;
+  }
+  .w3-container
+  {
+  }
+</style>
+<div class="w3-container">
+ 
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Janeiro</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+   <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Fevereiro</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Março</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+    <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Abril</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Maio</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Junho</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Julho</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Agosto</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+       <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Setembro</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Outubro</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+       <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Novembro</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+       <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-black">Dezembro</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+       <a href="#" class="w3-bar-item w3-button">Nome 1</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 2</a>
+      <a href="#" class="w3-bar-item w3-button">Nome 3</a>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+</div>
+
+<div class="box-mobile">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="assets/logo.png" width="50px" height="50px">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="?deslogar">Sair <span class="sr-only">(current)</span></a>
+        </li>     
+      </ul>
+    </div>
+  </nav>
+  <div class="box-mobile-inf">
+
+   <h2 class="txt-abertura"><?php echo "Bem Vindo, $nome_sorteio" ?></h2><br>
+   <h2 class="desc">Dados Pessoais</h2>
+   <h3 class="desc"><?php echo "Nome: $nome_sorteio" ?></h3>
+   <h3 class="desc"><?php echo "CPF: $cpf_sorteio" ?></h3>
+   <h3 class="desc"><?php echo "Numero do Sorteio: $id_sorteio" ?></h3>
+   <?php      
+   $sql = "SELECT * FROM vencedor WHERE id='$id_sorteio' AND datasorteio = (SELECT MAX(datasorteio) FROM vencedor)";
+   $result = $conexao->query($sql);
+   $row = $result->fetch_assoc();
+   if($row){
+    echo "<h3><font color='green'>PARABÉNS , VOCÊ GANHOU O SORTEIO\n ENTRE EM CONTATO PARA RECEBER SEU PREMIO</font></h3>";
+  }
+  ?>
+</div>
+
+
+</div>
+
+</body>
+</html>
+<style>
+.w3-button,.w3-black
+{
+  width: 150px;
+}
+.w3-dropdown-hover
+{
+  position: inherit!important;
+}
+.w3-bar-block .w3-bar-item
+{
+  text-decoration: none;
+}
+.w3-dropdown-content
+{
+  min-width: 150px;
+}
+.navbar
+{
+  margin-bottom: 0;
+}
+.bg-light
+{
+  background-color: #fdca01!important;
+}
+.box-mobile-inf h2,h3
+{
+  font-size: 1.5em;
+  color: white;
+  padding: 2%;
+  text-align: center;
+}
+.txt-abertura
+{
+  background-color: gray;
+}
+.btn-default
+{
+
+  border:1px solid #7d99ca;
+  background-color: #00658d69;
+
+}
+.btn-default:hover{
+  border:1px solid #5d7fbc;
+  background-color: #00658d2e; 
+}
+
+
+.w3-black
+{
+  border-radius: 10px 10px 10px 10px;
+  background-color:#0b5d8dc7!important; 
+}
+.w3-dropdown-hover:hover > .w3-button:first-child, .w3-dropdown-click:hover > .w3-button:first-child
+{
+  background-color: #fdca01!important;
+}
+</style>

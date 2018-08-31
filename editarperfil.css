@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+html body
+{
+	margin-left: 216px;
+	background-image: url('assets/fundo9.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.card-deck{
+	padding-left: 35%;
+	padding-right: 35%;
+	margin-top: 5%;
+	/* height: 250px; */
+}
+
+td{
+  border:10px solid #ffffff;
+  }
+
+.btn{
+	margin-top: 2%;
+}
