@@ -20,7 +20,7 @@ obterCampos();
 	<link rel="stylesheet" type="text/css" href="css/bootstrap4.1.3.min.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 
-	<title>Histórico dos Sorteio:</title>
+	<title>Histórico dos Sorteio</title>
 </head>
 <body>
 	<?php include 'sidebar.php'; ?>
@@ -165,7 +165,7 @@ html body
 
 .card{
 	position: initial!important;
-	margin-top: 5%;
+	margin-top: 30px;
 	width: 80%!important;
 		margin-bottom: 70px!important;
 

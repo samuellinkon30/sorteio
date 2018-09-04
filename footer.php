@@ -1,11 +1,11 @@
 <div>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <div class="footer">
 	<div class="left" align="left">
 		<p>ASPCRE - Associação de Servidores da Prefeitura da Cidade do Recife</p>
 	</div>
 	<div class="rigth" align="right">
-		<p><i class="fas fa-phone"></i> (81) 3421-1889 | (81) 3039-2034 | <i class="fab fa-whatsapp"></i> (81) 98639-3333 </p>
+			<p><i class="fas fa-phone"></i> (81) 3421-1889 | (81) 3039-2034 | <i class="fab fa-whatsapp"></i> (81) 98639-3333 </p>
 	</div>
 </div>
 
