@@ -165,7 +165,7 @@ html body
 
 .card{
 	position: initial!important;
-	margin-top: 30px;
+	margin-top: 5%;
 	width: 80%!important;
 		margin-bottom: 70px!important;
 

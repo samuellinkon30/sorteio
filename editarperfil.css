@@ -11,7 +11,7 @@ html body
 .card-deck{
 	padding-left: 35%;
 	padding-right: 35%;
-	margin-top: 5%;
+	margin-top: 8%!important;
 	/* height: 250px; */
 }
 

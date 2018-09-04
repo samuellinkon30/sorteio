@@ -72,7 +72,7 @@ $imgurleditar = $row['imgurl'];
 			{
 				.desktop{display: none;}
 				#file{width: 100px!important;
-					margin-top: 5%;
+					margin-top:5%;
 					margin-left: -12%;}
 			.card-deck
 			{

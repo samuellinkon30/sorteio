@@ -34,7 +34,7 @@ if($row) {
     <a href="editarperfil.php">Editar perfil</a>
     <br>
     <div class= "perfil">
-      <a> Navegação </a>
+      <a>  </a>
     </div>
     <div id="texts">
       <div class= "text">
@@ -102,7 +102,6 @@ if($row) {
     </div>
   </div>
   <style>
-  .negrito{font-weight: bold;}
   .ft
   {
     border-radius: 50%;

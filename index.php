@@ -24,7 +24,7 @@ if(isset($_POST['cpf']) && $_POST['cpf'] != null){
 <html lang= "pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Sistema Sorteio</title>
+	<title>Sorteio ASPCRE</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

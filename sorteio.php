@@ -52,7 +52,8 @@ if($codigo_sorteado) {
 						<form method="POST" action="sorteio.php">
 							<label class= "nsorteado"><b>Número do Sorteado:</b></label>
 							<input type="text" name="codigo_sorteado" id="codigo_sorteado">
-							<input type="submit" class="btn btn-primary btn-sm" value="Sortear!">
+							<input type="submit" class="btn btn-primary btn-sm" value="Sortear" id="bt">
+							<style>#bt{width: 150px;margin-top: -5px;}</style>
 						</form>
 						<div class = "table-overflow">
 							<table class = "table table-hover">

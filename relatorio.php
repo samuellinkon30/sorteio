@@ -89,7 +89,7 @@ if(isset($_GET['historico'])){
 	<input type="submit" class="btn btn-primary" value="Filtrar"/>
 	<input type="button" onclick="javascript:limpar('relatorio');" class="btn btn-primary" value="Limpar"/>
 </form>
-<br><br>
+<br>
 <div class= "table-overflow">
 <table class="table table-hover">
 <thead>

@@ -90,8 +90,7 @@ if(isset($_GET['nomehistorico'])){
 						<input type="submit" class= "btn btn-primary" id= "btnsize" value="Filtrar"></input>
 						<input type="button" class= "btn btn-primary" id= "btnsize" onclick="javascript:limpar();" value="Limpar"></input>
 					</form>
-					<br><br>
-					<div class= "table-overflow">
+					<br>					<div class= "table-overflow">
 
 						<table class="table table-hover">
 							<thead>

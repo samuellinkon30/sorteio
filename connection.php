@@ -1,8 +1,8 @@
 <?php
 	$host = "localhost";
-	$user = "u683890805_aspcr";
-	$pass = "g4dOeMQM4PVWDH8";
-	$banco = "u683890805_aspcr";
+	$user = "root";
+	$pass = "";
+	$banco = "aspcre2018";
 	//user: u683890805_aspcr
 	//bd: u683890805_aspcr
 	//g4dOeMQM4PVWDH8
